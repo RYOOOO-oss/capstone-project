@@ -17,7 +17,7 @@ import './index.css';
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL || '/'}>
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">
