@@ -1,3 +1,4 @@
 {
+  "name": "capstone-portfolio",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
