@@ -23,11 +23,21 @@ app.use(helmet());
 app.use(cors());
 
 // Health check for the hosting platform
-app.get('/health', (req, res) => {
+const { connectDB } = require('./db');
+app.get('/health', async (req, res) => {
+  // Self-heal: reconnect if the container's connection has dropped.
+  try {
+    await connectDB();
+  } catch (err) {
+    // reported below via readyState
+  }
   const dbUp = mongoose.connection.readyState === 1;
   res.status(dbUp ? 200 : 503).json({
     success: dbUp,
-    status: dbUp ? 'ok' : 'unavailable'
+    status: dbUp ? 'ok' : 'unavailable',
+    readyState: mongoose.connection.readyState,
+    hasMongoUri: Boolean(process.env.MONGO_URI),
+    hasJwtSecret: Boolean(process.env.JWT_SECRET)
   });
 });
 
