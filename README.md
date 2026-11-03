@@ -1,10 +1,10 @@
-# Capstone Project: Full-Stack Portfolio & Blog Application
+﻿# Capstone Project: Full-Stack Portfolio & Blog Application
 
 This is a complete full-stack personal portfolio and blog application, built as the capstone project for the Web Data Management and Application course.
 
 ## Live Demo
-- **Frontend (Portfolio Website)**: [Your Deployed Frontend URL] (e.g., https://your-portfolio.vercel.app)
-- **Backend API**: [Your Deployed Backend URL] (e.g., https://your-api.onrender.com)
+- **Frontend (Portfolio Website)**: [Live Site](https://ryoooo-oss.github.io/capstone-project/)
+- **Backend API**: [Live API](https://relaxed-heliotrope-3d17eb.netlify.app)
 
 ## Features
 - **Personal Portfolio**: Showcase your projects with descriptions, images, and links to code/live demos
